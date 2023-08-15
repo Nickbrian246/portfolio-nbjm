@@ -1,0 +1,8 @@
+/* body{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(20,50,140,1) 23%, rgba(3,23,61,1) 42%, rgba(5,26,68,1) 66%, rgba(20,50,140,1) 82%, rgba(20,50,140,1) 94%);;
+} */
+body{
+  box-sizing: border-box;
+  background-color: #faf9ff;
+}

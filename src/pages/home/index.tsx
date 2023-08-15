@@ -1,0 +1,213 @@
+import { useEffect, useRef } from "react";
+import { useContext, useState } from "react";
+import { Nav } from "./components/header";
+import { Language } from "../../store";
+import { card } from "./components/projects/utils";
+import { CardProjects } from "./components/projects/projectsCard";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import {MdOutlineEmail } from "react-icons/md"
+import CV from "../../assets/CV-NBJM.pdf"
+import { DividerWithText } from "../../components/DividesWithText";
+
+
+function Home() {
+  const {language } = useContext(Language);
+  const [isIntersectingProjects, setIsIntersectingProjects] = useState<boolean>(false)
+  const [isIntersectingContact, setIsIntersectingContact] = useState<boolean>(false)
+  const [isIntersectingAboutMe, setIsIntersectingAboutMe] = useState<boolean>(false)
+  const projectsRef = useRef<HTMLDivElement>(null)
+  const contactRef = useRef<HTMLDivElement>(null)
+  const aboutMeRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    
+    const observerAboutMe = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setIsIntersectingAboutMe(entry.intersectionRatio >= 0.75);
+    }, { threshold: [0, 0.25, 0.4, 0.75, 1] });
+    if (aboutMeRef.current) {
+      observerAboutMe.observe(aboutMeRef.current);
+    }
+  
+    const observerProjects = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setIsIntersectingProjects(entry.isIntersecting);
+    }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
+    
+    if (projectsRef.current) {
+      observerProjects.observe(projectsRef.current);
+    }
+  
+    const observerContact = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setIsIntersectingContact(entry.intersectionRatio >= 0.25);
+    }, { threshold: [0, 0.25, 0.4, 0.75, 1] });
+    if (contactRef.current) {
+      observerContact.observe(contactRef.current);
+    }
+  }, []);
+  
+
+  return (
+    <>
+      <header  className="w-full h-14 border-b-[1px] border-gray-400  bg-[#333252] p-0  md:fixed  md:top-0 z-20">
+        <Nav 
+        aboutMe = {isIntersectingAboutMe}
+        contact = {isIntersectingContact}
+        projects = {isIntersectingProjects}/>
+      </header>
+      <article ref={aboutMeRef} className="max-full bg-[#343353] flex items-center justify-center  h-screen p-5 m-auto " >   {/* about me  */}
+          <div className="md:w-2/4 h-screen  flex flex-col justify-center">
+            <h2 className="font-semibold italic my-5 text-4xl text-white">
+                {language ? "Hola, soy Nick Brian y soy Ingeniero Mecatrónico y desarrollador Web."
+                :"Hello, my name is Nick Brian and I am a mechatronics engineer and web developer." }
+            </h2>
+            <p className="text-xl text-white">
+              {language ? " Me apasiona el mundo del desarrollo de software y disfruto trabajando con React Js y JavaScript."
+              : " I am passionate about the world of software development and I enjoy working with React and JavaScript." }
+            </p>
+            <a href={CV} target="_blank" className="  my-14 w-44 h-14">
+                <button className=" w-44 h-14 bg-red-700 rounded text-2xl text-white">
+                {language ? "Ver Cv" : "View CV"}
+                </button>
+            </a>
+          </div>
+      </article>
+
+      <section id="Projects" ref={projectsRef} className={`
+      max-w-7xl
+      my-20  p-5
+      flex m-auto
+      justify-around
+      gap-4 flex-wrap
+      transition-all ease-out duration-700
+      ${isIntersectingProjects ? "opacity-1 " : " scale-[0.8]   opacity-0"}
+      `}> {/**Proyectos */}
+      <DividerWithText  isIntersecting={isIntersectingProjects} TextEs="Proyectos" TextEn="Projects" language={language}/>
+        {card.map((item)=> { 
+          return <CardProjects 
+            key={item.id}
+            DescriptionTextEn={item.DescriptionTextEn}
+            DescriptionTextEs={item.DescriptionTextEs}
+            DescriptionTittleEnglish={item.DescriptionTittleEnglish}
+            DescriptionTittleEs={item.DescriptionTittleEs}
+            IsActiveAntDesign={item.IsActiveAntDesign}
+            IsActiveCss={item.IsActiveCss}
+            IsActiveExpressJs={item.IsActiveExpressJs}
+            IsActiveHtml={item.IsActiveHtml}
+            IsActiveJs={item.IsActiveJs}
+            IsActiveMaterialUi={item.IsActiveMaterialUi}
+            IsActiveMongoDb={item.IsActiveMongoDb}
+            IsActiveNodeJs={item.IsActiveNodeJs}
+            IsActiveReactJs={item.IsActiveReactJs}
+            IsActiveReactRedux={item.IsActiveReactRedux}
+            IsActiveReactRouter={item.IsActiveReactRouter}
+            IsActiveTypeScript={item.IsActiveTypeScript}
+            IsLinkToGitHub={item.IsLinkToGitHub}
+            IsLinkToProject={item.IsLinkToProject}
+            LinkChildrenTextEs={item.LinkChildrenTextEs}
+            LinkChildrenTextToProjectEs={item.LinkChildrenTextToProjectEs}
+            LinkGitHubIcon={item.LinkGitHubIcon}
+            LinkToProjectIcon={item.LinkToProjectIcon}
+            ListItemHtmlIcon={item.ListItemHtmlIcon}
+            ListItemTechnologyAntDesignIcon={item.ListItemTechnologyAntDesignIcon}
+            ListItemTechnologyCssIcon={item.ListItemTechnologyCssIcon}
+            ListItemTechnologyExpressJsIcon={item.ListItemTechnologyExpressJsIcon}
+            ListItemTechnologyJavaScriptIcon={item.ListItemTechnologyJavaScriptIcon}
+            ListItemTechnologyMaterialUiIcon={item.ListItemTechnologyMaterialUiIcon}
+            ListItemTechnologyMongoDbIcon={item.ListItemTechnologyMongoDbIcon}
+            ListItemTechnologyNodeJsIcon={item.ListItemTechnologyNodeJsIcon}
+            ListItemTechnologyReactJsIcon={item.ListItemTechnologyReactJsIcon}
+            ListItemTechnologyReactReduxIcon={item.ListItemTechnologyReactReduxIcon}
+            ListItemTechnologyReactRouterIcon={item.ListItemTechnologyReactRouterIcon}
+            ListItemTechnologyTypeScript={item.ListItemTechnologyTypeScript}
+            ListItemTechologiAntDesign={item.ListItemTechologiAntDesign}
+            ListItemTechologiCSS={item.ListItemTechologiCSS}
+            ListItemTechologiExpress={item.ListItemTechologiExpress}
+            ListItemTechologiHtml={item.ListItemTechologiHtml}
+            ListItemTechologiJavascript={item.ListItemTechologiJavascript}
+            ListItemTechologiMaterialUi={item.ListItemTechologiMaterialUi}
+            ListItemTechologiMongoDB={item.ListItemTechologiMongoDB}
+            ListItemTechologiNodeJs={item.ListItemTechologiNodeJs}
+            ListItemTechologiReactJs={item.ListItemTechologiReactJs}
+            ListItemTechologiReactRedux={item.ListItemTechologiReactRedux}
+            ListItemTechologiReactRouter={item.ListItemTechologiReactRouter}
+            ListItemTechologiTypeScript={item.ListItemTechologiTypeScript}
+            ListItemTechnologyTailwindIcon={item.ListItemTechnologyTailwindIcon}
+            ListItemTechologiTailwind={item.ListItemTechologiTailwind}
+            IsActiveTailwind={item.IsActiveTailwind}
+            imgALT={item.imgALT}
+            imgSrc={item.imgSrc}
+            linkChildrenTextEn={item.linkChildrenTextEn}
+            linkChildrenTextToProjectEn={item.linkChildrenTextToProjectEn}
+            linkHrefGitHub={item.linkHrefGitHub}
+            subTittleTechnologiesEn={item.subTittleTechnologiesEn}
+            subTittleTechnologiesEs={item.subTittleTechnologiesEs}
+            titleEn={item.titleEn}
+            tittleEs={item.tittleEs}
+            linkHrefToProject={item.linkHrefToProject}
+            spanTittleEn={item.spanTittleEn}
+            spanTittleEs={item.spanTittleEs}
+            id={item.id}
+
+            />
+          })}
+      </section>
+
+      <footer id="Contact" ref={contactRef} className="w-full  my-20  p-5 mb-0 bg-[#333252]  flex justify-center m-auto h-1/2" >
+        <section className="sm:max-w-7xl w-full flex flex-col gap-8  ">
+        <DividerWithText  isIntersecting={isIntersectingContact} TextEs="Contacto" TextEn="Contact" language={language}/>
+            <div className="flex-col w-fit
+                          mt-2
+                          items-center
+                          gap-1
+                          text-2xl
+                          ">
+                <ul>
+                  <li><a href="https://www.linkedin.com/in/nick-jauregui-meneses-524256213/"  target="_blank" className="
+                  flex items-center gap-1 text-sky-400
+                  hover:underline
+                  hover:cursor-pointer
+                  ">
+                    <AiFillLinkedin/>
+                    LinkedIn
+                    </a>
+                    </li>
+                  <li >
+                    <a href="mailto:Nbjm1234@outlook.com" className="
+                          w-fit
+                          mt-2
+                          flex
+                          text-cyan-300
+                          items-center
+                          gap-1
+                          hover:underline
+                          "
+                          >
+                            <MdOutlineEmail/>Nbjm1234@outlook.com
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                    href="https://github.com/Nickbrian246"  target="_blank" 
+                    className="
+                    flex items-center gap-1 text-white
+                    hover:underline
+                    hover:cursor-pointer
+                    hover:text-black"
+                    >
+                      <AiFillGithub/>
+                      GitHub
+                      </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+      </footer>
+
+    </>
+  );
+}
+
+export default Home;
