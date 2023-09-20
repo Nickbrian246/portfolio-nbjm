@@ -54,6 +54,8 @@ const CardProjects = (props:Card) => {
     spanTittleEs,
     IsActiveTailwind,
     ListItemTechnologyTailwindIcon,
+    IsActiveJsonWebToken,
+    ListItemTechnologyJsonWebToken
     } = props
   const {language } = useContext(Language);
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -107,6 +109,14 @@ const CardProjects = (props:Card) => {
                           <span>{ListItemTechnologyJavaScriptIcon}</span>
                         JavaScript.
                         </li>
+                        {IsActiveTypeScript && (
+                        <li
+                        className="  flex  gap-1 items-center text-base text-blue-700 font-medium"
+                        >
+                          <span>{ListItemTechnologyTypeScript}</span>
+                          TypeScript
+                        </li>
+                      )}
 
                         <li
                         className="  flex  gap-1 items-center text-base text-orange-500 font-medium"
@@ -183,6 +193,16 @@ const CardProjects = (props:Card) => {
                           MongoDB
                           </li>
                         )}
+                        {IsActiveJsonWebToken && (
+                            <li
+                            className="  flex  gap-1 items-center text-base text-slate-400 font-medium"
+                            >
+                            <span>{ListItemTechnologyJsonWebToken}</span>
+                            JsonWebToken
+                            </li>
+                        )
+
+                        }
 
                       </ul>
                       <ul className="  flex-col h-auto  ">
@@ -194,14 +214,7 @@ const CardProjects = (props:Card) => {
                         Material UI
                       </li>
                       )}
-                      {IsActiveTypeScript && (
-                        <li
-                        className="  flex  gap-1 items-center text-base text-blue-700 font-medium"
-                        >
-                          <span>{ListItemTechnologyTypeScript}</span>
-                          TypeScript
-                        </li>
-                      )}
+
                       {IsActiveAntDesign && (
                         <li
                         className="  flex  gap-1 items-center text-base text-red-600 font-medium"

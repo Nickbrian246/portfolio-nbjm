@@ -16,6 +16,10 @@ export interface Card {
   IsActiveJs: boolean;
   ListItemTechologiJavascript: string;
   ListItemTechnologyJavaScriptIcon: ReactNode;
+  
+  IsActiveJsonWebToken:boolean,
+  listItemTechologiJsonWebToken:string,
+  ListItemTechnologyJsonWebToken:ReactNode
 
   IsActiveHtml: boolean;
   ListItemTechologiHtml: string;

@@ -83,7 +83,12 @@ function Home() {
       transition-all ease-out duration-700
       ${isIntersectingProjects ? "opacity-1 " : " scale-[0.8]   opacity-0"}
       `}> {/**Proyectos */}
-      <DividerWithText  isIntersecting={isIntersectingProjects} TextEs="Proyectos" TextEn="Projects" language={language}/>
+      <DividerWithText
+        isIntersecting={isIntersectingProjects}
+        TextEs="Proyectos"
+        TextEn="Projects"
+        language={language}
+        />
         {card.map((item)=> { 
           return <CardProjects 
             key={item.id}
@@ -148,6 +153,9 @@ function Home() {
             linkHrefToProject={item.linkHrefToProject}
             spanTittleEn={item.spanTittleEn}
             spanTittleEs={item.spanTittleEs}
+            IsActiveJsonWebToken ={item.IsActiveJsonWebToken}
+            ListItemTechnologyJsonWebToken ={item.ListItemTechnologyJsonWebToken}
+            listItemTechologiJsonWebToken={item.listItemTechologiJsonWebToken}
             id={item.id}
 
             />

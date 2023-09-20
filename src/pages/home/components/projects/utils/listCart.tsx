@@ -1,6 +1,16 @@
 import { AiFillHtml5,AiOutlineAntDesign, AiOutlineGithub } from "react-icons/ai";
 import { FaNodeJs, FaReact } from "react-icons/fa";
-import { SiCss3, SiExpress, SiJavascript, SiMongodb, SiMui, SiReactrouter, SiTypescript ,SiTailwindcss} from "react-icons/si";
+import {
+  SiCss3,
+  SiExpress,
+  SiJavascript,
+  SiMongodb,
+  SiMui,
+  SiReactrouter,
+  SiTypescript,
+  SiTailwindcss,
+  SiJsonwebtokens,
+} from "react-icons/si";
 import { TbBrandRedux } from "react-icons/tb";
 
 import { Card } from "../interfaces";
@@ -26,6 +36,10 @@ export const card: Card[] = [
     IsActiveJs:true,
     ListItemTechologiJavascript:"Javascript",
     ListItemTechnologyJavaScriptIcon:<SiJavascript/>,
+
+    IsActiveJsonWebToken:true,
+    listItemTechologiJsonWebToken:"json webToken",
+    ListItemTechnologyJsonWebToken:<SiJsonwebtokens/>,
 
     IsActiveHtml:true,
     ListItemTechologiHtml:"Html",
@@ -63,7 +77,7 @@ export const card: Card[] = [
     ListItemTechologiMaterialUi:"MaterialUI",
     ListItemTechnologyMaterialUiIcon:<SiMui/>,
 
-    IsActiveAntDesign:true,
+    IsActiveAntDesign:false,
     ListItemTechologiAntDesign:"Ant Design",
     ListItemTechnologyAntDesignIcon:<AiOutlineAntDesign/>,
 
@@ -115,10 +129,15 @@ export const card: Card[] = [
     subTittleTechnologiesEs:"Tecnologias usadas en el proyecto",
     subTittleTechnologiesEn:"Technologies used in the project",
 
+    
+    
     IsActiveJs:true,
     ListItemTechologiJavascript:"Javascript",
     ListItemTechnologyJavaScriptIcon:<SiJavascript/>,
-
+    
+    IsActiveJsonWebToken:false,
+    listItemTechologiJsonWebToken:"json webToken",
+    ListItemTechnologyJsonWebToken:<SiJsonwebtokens/>,
     IsActiveHtml:true,
     ListItemTechologiHtml:"Html",
     ListItemHtmlIcon:  <AiFillHtml5/>,
@@ -210,6 +229,10 @@ export const card: Card[] = [
     IsActiveJs:true,
     ListItemTechologiJavascript:"Javascript",
     ListItemTechnologyJavaScriptIcon:<SiJavascript/>,
+
+    IsActiveJsonWebToken:false,
+    listItemTechologiJsonWebToken:"json webToken",
+    ListItemTechnologyJsonWebToken:<SiJsonwebtokens/>,
 
     IsActiveHtml:true,
     ListItemTechologiHtml:"Html",
@@ -306,6 +329,10 @@ export const card: Card[] = [
     IsActiveJs:true,
     ListItemTechologiJavascript:"Javascript",
     ListItemTechnologyJavaScriptIcon:<SiJavascript/>,
+
+    IsActiveJsonWebToken:false,
+    listItemTechologiJsonWebToken:"json webToken",
+    ListItemTechnologyJsonWebToken:<SiJsonwebtokens/>,
 
     IsActiveHtml:true,
     ListItemTechologiHtml:"Html",
