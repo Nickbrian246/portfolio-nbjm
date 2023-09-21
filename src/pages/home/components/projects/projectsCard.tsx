@@ -4,6 +4,7 @@ import { Card } from "./interfaces";
 import React from "react";
 import { Language } from "../../../../store";
 import { TextShortedNextWhiteSpace } from "../../utils";
+import { Carousel } from "../../../../components/Carousel";
 
 const CardProjects = (props:Card) => {
   const {
@@ -58,7 +59,8 @@ const CardProjects = (props:Card) => {
     ListItemTechnologyJsonWebToken
     } = props
   const {language } = useContext(Language);
-  const [showFullDescription, setShowFullDescription] = useState(false);
+  const [showFullDescription, setShowFullDescription] = useState<boolean>(false);
+  const [isOpenModal, setIsOpenModl] =useState<boolean>(false)
 
   const toggleDescription = () => {
     setShowFullDescription(!showFullDescription);
@@ -77,7 +79,15 @@ const CardProjects = (props:Card) => {
   const titleStyles = "text-xlW  leading-7 font-medium"
   return(
     <>
-        <div  className=" max-w-md  border-2 rounded-lg border-[#333252] sm:p-4 p-1  "> {/** contenedor de la carta */}
+        <div  className=" 
+        max-w-md
+        border-2
+        rounded-lg
+        border-[#333252]
+        sm:p-4
+        p-1  
+        relative"
+        > {/** contenedor de la carta */}
           <div className="flex justify-center">
           <h2 className="text-2xl mb-3"  >{ /**titulo */
             language ? tittleEs : titleEn}
@@ -92,9 +102,13 @@ const CardProjects = (props:Card) => {
           </div>
 
           <div className=" flex-col " >{/**Imagen y tecnologias */}
-              <picture className="max-w-xl max-h-56">
-                <img className=" rounded-md max-w-xl max-h-56 m-auto" src={imgSrc} alt={imgALT}/>
+             <a target="_self" href="#carouselModal">
+             <picture
+              onClick={()=>{setIsOpenModl(true)}} 
+              className=" max-h-56 cursor-pointer">
+                <img className="border-blue-600 border-2 rounded-md max-w-[400px] max-h-56 m-auto" src={imgSrc} alt={imgALT}/>
               </picture>
+             </a>
               <div className="mt-3">
                 <p className={titleStyles}>{
                 language ? subTittleTechnologiesEs
@@ -296,6 +310,29 @@ const CardProjects = (props:Card) => {
 
 
         </div>
+        {isOpenModal && (
+          <div 
+        id="carouselModal"
+          className="
+          w-full
+          flex
+          justify-center
+          items-center
+          absolute
+          z-30
+          left-0
+          h-full
+          backdrop-blur-sm
+          ">
+
+          <div 
+          >
+            <Carousel 
+            setIsOpenModal={setIsOpenModl}
+            />
+          </div>
+          </div>
+        )}
     </>
   )
 };

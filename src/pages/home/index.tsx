@@ -8,7 +8,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import {MdOutlineEmail } from "react-icons/md"
 import CV from "../../assets/CV-NBJM.pdf"
 import { DividerWithText } from "../../components/DividesWithText";
-
+import { Carousel } from "../../components/Carousel";
 
 function Home() {
   const {language } = useContext(Language);
@@ -50,7 +50,16 @@ function Home() {
 
   return (
     <>
-      <header  className="w-full h-14 border-b-[1px] border-gray-400  bg-[#333252] p-0  md:fixed  md:top-0 z-20">
+      <header  className="
+      w-full
+      h-14
+      border-b-[1px]
+      border-gray-400
+      bg-black
+      p-0
+      md:fixed
+      md:top-0
+      z-20">
         <Nav 
         aboutMe = {isIntersectingAboutMe}
         contact = {isIntersectingContact}
@@ -211,9 +220,7 @@ function Home() {
                 </ul>
             </div>
         </section>
-
       </footer>
-
     </>
   );
 }

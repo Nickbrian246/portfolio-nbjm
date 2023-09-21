@@ -1,3 +1,4 @@
+import pointOfSaleHomePicture from  "../../../../../assets/pointOfSale/home.png"
 import { AiFillHtml5,AiOutlineAntDesign, AiOutlineGithub } from "react-icons/ai";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import {
@@ -27,7 +28,7 @@ export const card: Card[] = [
     spanTittleEn:"(FullStack Project)",
     
 
-    imgSrc:"https://i.pinimg.com/564x/a2/bb/de/a2bbdea29ae94f652292da1f0b9c589c.jpg",
+    imgSrc:pointOfSaleHomePicture,
     imgALT:"point Of Sale project", 
 
     subTittleTechnologiesEs:"Tecnologias usadas en el proyecto",
