@@ -1,33 +1,38 @@
-import React, { useState } from "react";
-import { pointOfSaleData } from "../utils/carouselData";
-import { Divider } from "./Divider";
+import React, { useState, useContext } from "react";
+import { CarouselData } from "../interfaces";
+import { Language } from "../store";
 
 interface Props {
     setIsOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
-}
+    dataForCarousel:CarouselData[]
+
+}   
 
 const Carousel = (props: Props) => {
-    const { setIsOpenModal } = props;
+    const { setIsOpenModal,dataForCarousel } = props;
+    const {language } = useContext(Language);
+    console.log(language);
+    
     const [selectedIndex, setSelectedIndex] = useState<number>(0);
-    const [selectedImage, setSelectedImage] = useState(pointOfSaleData[selectedIndex].img);
+    const [selectedImage, setSelectedImage] = useState(dataForCarousel[selectedIndex].img);
 
     const prev = () => {
         const condition = selectedIndex > 0;
-        const nextIndex = condition ? selectedIndex - 1 : pointOfSaleData.length - 1;
-        setSelectedImage(pointOfSaleData[nextIndex].img);
+        const nextIndex = condition ? selectedIndex - 1 : dataForCarousel.length - 1;
+        setSelectedImage(dataForCarousel[nextIndex].img);
         setSelectedIndex(nextIndex);
     };
     const next = () => {
-        const condition = selectedIndex < pointOfSaleData.length - 1;
+        const condition = selectedIndex < dataForCarousel.length - 1;
         const nextIndex = condition ? selectedIndex + 1 : 0;
-        setSelectedImage(pointOfSaleData[nextIndex].img);
+        setSelectedImage(dataForCarousel[nextIndex].img);
         setSelectedIndex(nextIndex);
     };
 
     return (
         <>
             <section
-              
+            
                 style={{
                     width: "900px",
                     minHeight: "600px",
@@ -55,13 +60,13 @@ const Carousel = (props: Props) => {
                         width: "100%",
                         maxHeight: "600px",
                         position: "absolute",
-                        opacity: 0.2, // Cambiar a un valor entre 0 y 1 para la opacidad
+                        opacity: 0.2, 
                     }}
                 />
                 <p
                     className="text-center mt-3 font-semibold text-lg"
                 >
-                    {pointOfSaleData[selectedIndex].descriptionEs}
+                    { Language? dataForCarousel[selectedIndex].descriptionEn  :  dataForCarousel[selectedIndex].descriptionEn}
                 </p>
                 <div
                     className="bg-slate-950 w-full h-1"

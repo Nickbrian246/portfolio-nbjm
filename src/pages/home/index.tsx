@@ -8,13 +8,14 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import {MdOutlineEmail } from "react-icons/md"
 import CV from "../../assets/CV-NBJM.pdf"
 import { DividerWithText } from "../../components/DividesWithText";
-import { Carousel } from "../../components/Carousel";
+
 
 function Home() {
   const {language } = useContext(Language);
   const [isIntersectingProjects, setIsIntersectingProjects] = useState<boolean>(false)
   const [isIntersectingContact, setIsIntersectingContact] = useState<boolean>(false)
   const [isIntersectingAboutMe, setIsIntersectingAboutMe] = useState<boolean>(false)
+  const [isOpenModel,setIsOpeonModal] = useState<boolean>(false);
   const projectsRef = useRef<HTMLDivElement>(null)
   const contactRef = useRef<HTMLDivElement>(null)
   const aboutMeRef = useRef<HTMLDivElement>(null)
@@ -31,7 +32,7 @@ function Home() {
   
     const observerProjects = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      setIsIntersectingProjects(entry.isIntersecting);
+      setIsIntersectingProjects(entry.isIntersecting);    
     }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
     
     if (projectsRef.current) {
@@ -45,7 +46,7 @@ function Home() {
     if (contactRef.current) {
       observerContact.observe(contactRef.current);
     }
-  }, []);
+  },);
   
 
   return (
@@ -99,7 +100,8 @@ function Home() {
         language={language}
         />
         {card.map((item)=> { 
-          return <CardProjects 
+          return <CardProjects
+          dataForCarousel={item.dataForCarousel} 
             key={item.id}
             DescriptionTextEn={item.DescriptionTextEn}
             DescriptionTextEs={item.DescriptionTextEs}

@@ -1,13 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Divider } from "../../../../components/Divider";
 import { Card } from "./interfaces";
 import React from "react";
 import { Language } from "../../../../store";
 import { TextShortedNextWhiteSpace } from "../../utils";
 import { Carousel } from "../../../../components/Carousel";
+import {TiDeleteOutline} from  "react-icons/ti"
 
 const CardProjects = (props:Card) => {
   const {
+    dataForCarousel,
     DescriptionTextEn,
     DescriptionTextEs,
     DescriptionTittleEnglish,
@@ -56,12 +58,12 @@ const CardProjects = (props:Card) => {
     IsActiveTailwind,
     ListItemTechnologyTailwindIcon,
     IsActiveJsonWebToken,
-    ListItemTechnologyJsonWebToken
+    ListItemTechnologyJsonWebToken,
+
     } = props
   const {language } = useContext(Language);
   const [showFullDescription, setShowFullDescription] = useState<boolean>(false);
-  const [isOpenModal, setIsOpenModl] =useState<boolean>(false)
-
+  const[isOpenModal, setIsOpenModal] = useState<boolean>(false)
   const toggleDescription = () => {
     setShowFullDescription(!showFullDescription);
   };
@@ -75,18 +77,20 @@ const CardProjects = (props:Card) => {
         </React.Fragment>
       ));
   };
+console.log(dataForCarousel);
 
   const titleStyles = "text-xlW  leading-7 font-medium"
   return(
     <>
-        <div  className=" 
+      
+        <div  className={` 
         max-w-md
         border-2
         rounded-lg
         border-[#333252]
         sm:p-4
-        p-1  
-        relative"
+        p-1 
+        ${isOpenModal ? "relative" : "static  "}`}
         > {/** contenedor de la carta */}
           <div className="flex justify-center">
           <h2 className="text-2xl mb-3"  >{ /**titulo */
@@ -102,13 +106,13 @@ const CardProjects = (props:Card) => {
           </div>
 
           <div className=" flex-col " >{/**Imagen y tecnologias */}
-             <a target="_self" href="#carouselModal">
-             <picture
-              onClick={()=>{setIsOpenModl(true)}} 
+              <a target="_self" href="#carouselModal">
+              <picture
+              onClick={()=>{setIsOpenModal(true)}} 
               className=" max-h-56 cursor-pointer">
                 <img className="border-blue-600 border-2 rounded-md max-w-[400px] max-h-56 m-auto" src={imgSrc} alt={imgALT}/>
               </picture>
-             </a>
+              </a>
               <div className="mt-3">
                 <p className={titleStyles}>{
                 language ? subTittleTechnologiesEs
@@ -311,8 +315,9 @@ const CardProjects = (props:Card) => {
 
         </div>
         {isOpenModal && (
-          <div 
-        id="carouselModal"
+
+          <div
+          id="carouselModal"
           className="
           w-full
           flex
@@ -327,8 +332,23 @@ const CardProjects = (props:Card) => {
 
           <div 
           >
+            <button
+            onClick={()=>{setIsOpenModal((prevState) => !prevState)}}
+            className="
+            bg-slate-50
+            rounded-full
+            border
+            absolute
+            z-40
+            right-10
+            top-10
+            text-5xl
+            text-red-700">
+              <TiDeleteOutline/>
+            </button>
             <Carousel 
-            setIsOpenModal={setIsOpenModl}
+            dataForCarousel = {dataForCarousel}
+            setIsOpenModal={setIsOpenModal}
             />
           </div>
           </div>

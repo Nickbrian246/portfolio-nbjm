@@ -15,6 +15,7 @@ import {
 import { TbBrandRedux } from "react-icons/tb";
 
 import { Card } from "../interfaces";
+import { pointOfSaleData, fiananzasApp } from "../../../../../utils/carouselData";
 
 
 
@@ -26,6 +27,7 @@ export const card: Card[] = [
     tittleEs:"Punto de venta",
     spanTittleEs:"(Proyecto FullStack )",
     spanTittleEn:"(FullStack Project)",
+    dataForCarousel:pointOfSaleData,
     
 
     imgSrc:pointOfSaleHomePicture,
@@ -122,6 +124,7 @@ export const card: Card[] = [
     tittleEs:"Mercado libre Clone",
     spanTittleEs:"(Proyecto solo FrontEnd )",
     spanTittleEn:"(Frontend Project)",
+    dataForCarousel:[],
     
 
     imgSrc:"https://i.pinimg.com/564x/a2/bb/de/a2bbdea29ae94f652292da1f0b9c589c.jpg",
@@ -219,6 +222,7 @@ export const card: Card[] = [
     tittleEs:"Finanzas app ",
     spanTittleEs:"(Proyecto frontEnd )",
     spanTittleEn:"(Frontend Project)",
+    dataForCarousel :fiananzasApp,
     
 
     imgSrc:"https://i.pinimg.com/564x/a2/bb/de/a2bbdea29ae94f652292da1f0b9c589c.jpg",
@@ -319,7 +323,7 @@ export const card: Card[] = [
     tittleEs:" Api del Clima",
     spanTittleEs:"(Proyecto FrontEnd)",
     spanTittleEn:"(Frontend Project)",
-    
+    dataForCarousel:[],
 
     imgSrc:"https://i.pinimg.com/564x/a2/bb/de/a2bbdea29ae94f652292da1f0b9c589c.jpg",
     imgALT:"Weather Api", 

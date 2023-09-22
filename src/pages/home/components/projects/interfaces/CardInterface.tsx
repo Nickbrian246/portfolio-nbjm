@@ -1,6 +1,9 @@
 import { ReactNode } from "react";
+import { CarouselData } from "../../../../../interfaces";
 
 export interface Card {
+
+  dataForCarousel :CarouselData[],
   id:string,
   titleEn: string;
   tittleEs: string;
