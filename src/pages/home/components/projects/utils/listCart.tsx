@@ -15,7 +15,11 @@ import {
 import { TbBrandRedux } from "react-icons/tb";
 
 import { Card } from "../interfaces";
-import { pointOfSaleData, fiananzasApp } from "../../../../../utils/carouselData";
+import {
+  pointOfSaleData,
+  fiananzasApp,
+  mercadoLibreClonData,
+} from "../../../../../utils/carouselData";
 
 
 
@@ -124,7 +128,7 @@ export const card: Card[] = [
     tittleEs:"Mercado libre Clone",
     spanTittleEs:"(Proyecto solo FrontEnd )",
     spanTittleEn:"(Frontend Project)",
-    dataForCarousel:[],
+    dataForCarousel:mercadoLibreClonData,
     
 
     imgSrc:"https://i.pinimg.com/564x/a2/bb/de/a2bbdea29ae94f652292da1f0b9c589c.jpg",

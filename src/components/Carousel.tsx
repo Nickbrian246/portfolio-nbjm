@@ -11,10 +11,10 @@ interface Props {
 const Carousel = (props: Props) => {
     const { setIsOpenModal,dataForCarousel } = props;
     const {language } = useContext(Language);
-    console.log(language);
-    
     const [selectedIndex, setSelectedIndex] = useState<number>(0);
     const [selectedImage, setSelectedImage] = useState(dataForCarousel[selectedIndex].img);
+    
+    
 
     const prev = () => {
         const condition = selectedIndex > 0;
