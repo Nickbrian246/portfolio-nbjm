@@ -74,7 +74,7 @@ function Home() {
             </h2>
             <p className="text-xl text-white">
               {language ? " Me apasiona el mundo del desarrollo de software y disfruto trabajando con React Js y JavaScript."
-              : " I am passionate about the world of software development and I enjoy working with React and JavaScript." }
+              : " I am an engineer by profession but a web developer by passion." }
             </p>
             <a href={CV} target="_blank" className="  my-14 w-44 h-14">
                 <button className=" w-44 h-14 bg-red-700 rounded text-2xl text-white">

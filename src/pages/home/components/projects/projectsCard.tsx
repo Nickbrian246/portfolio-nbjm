@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useState } from "react";
 import { Divider } from "../../../../components/Divider";
 import { Card } from "./interfaces";
 import React from "react";
@@ -63,7 +63,8 @@ const CardProjects = (props:Card) => {
     } = props
   const {language } = useContext(Language);
   const [showFullDescription, setShowFullDescription] = useState<boolean>(false);
-  const[isOpenModal, setIsOpenModal] = useState<boolean>(false)
+  const[isOpenModal, setIsOpenModal] = useState<boolean>(false);
+  const [keypress, setKeyPress] = useState<string>("")
   const toggleDescription = () => {
     setShowFullDescription(!showFullDescription);
   };
@@ -77,7 +78,8 @@ const CardProjects = (props:Card) => {
         </React.Fragment>
       ));
   };
-console.log(dataForCarousel);
+
+
 
   const titleStyles = "text-xlW  leading-7 font-medium"
   return(
@@ -315,7 +317,6 @@ console.log(dataForCarousel);
 
         </div>
         {isOpenModal && (
-
           <div
           id="carouselModal"
           className="

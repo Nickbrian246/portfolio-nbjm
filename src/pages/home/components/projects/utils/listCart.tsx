@@ -1,5 +1,6 @@
 import pointOfSaleHomePicture from  "../../../../../assets/pointOfSale/home.png"
 import { AiFillHtml5,AiOutlineAntDesign, AiOutlineGithub } from "react-icons/ai";
+import {FiNavigation} from "react-icons/fi";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import {
   SiCss3,
@@ -20,6 +21,8 @@ import {
   fiananzasApp,
   mercadoLibreClonData,
 } from "../../../../../utils/carouselData";
+import fiananzasAppImage from "../../../../../assets/finanzasApp/home finanzas app.webp";
+import mercadoLibreImage from "../../../../../assets/mercadoLibreClon/home1.webp";
 
 
 
@@ -114,11 +117,11 @@ export const card: Card[] = [
     LinkChildrenTextEs:"Visualizar el codigo en gitHub",
     linkChildrenTextEn:"View code on GitHub ",
 
-    IsLinkToProject:false,
-    linkHrefToProject:"",
-    LinkToProjectIcon: <AiOutlineGithub/>,
-    LinkChildrenTextToProjectEs:"Visualizar el codigo en gitHub",
-    linkChildrenTextToProjectEn:"View code on GitHub ",
+    IsLinkToProject:true,
+    linkHrefToProject:"https://puntodeventa.nbjdev.com/",
+    LinkToProjectIcon: <FiNavigation/>,
+    LinkChildrenTextToProjectEs:"Visitar sitio web",
+    linkChildrenTextToProjectEn:"Visit web site",
 
 
   },
@@ -131,7 +134,7 @@ export const card: Card[] = [
     dataForCarousel:mercadoLibreClonData,
     
 
-    imgSrc:"https://i.pinimg.com/564x/a2/bb/de/a2bbdea29ae94f652292da1f0b9c589c.jpg",
+    imgSrc:mercadoLibreImage,
     imgALT:"e-commerce project ", 
 
     subTittleTechnologiesEs:"Tecnologias usadas en el proyecto",
@@ -212,11 +215,11 @@ export const card: Card[] = [
     LinkChildrenTextEs:"Visualizar el codigo en gitHub",
     linkChildrenTextEn:"View code on GitHub ",
 
-    IsLinkToProject:false,
-    linkHrefToProject:"",
-    LinkToProjectIcon: <AiOutlineGithub/>,
-    LinkChildrenTextToProjectEs:"Visualizar el codigo en gitHub",
-    linkChildrenTextToProjectEn:"View code on GitHub ",
+    IsLinkToProject:true,
+    linkHrefToProject:"https://e-commerce.nbjdev.com/",
+    LinkToProjectIcon: <FiNavigation/>,
+    LinkChildrenTextToProjectEs:"Visitar sitio web",
+    linkChildrenTextToProjectEn:"Visit website",
 
 
   },
@@ -229,7 +232,7 @@ export const card: Card[] = [
     dataForCarousel :fiananzasApp,
     
 
-    imgSrc:"https://i.pinimg.com/564x/a2/bb/de/a2bbdea29ae94f652292da1f0b9c589c.jpg",
+    imgSrc:fiananzasAppImage,
     imgALT:"Finance app", 
 
     subTittleTechnologiesEs:"Tecnologias usadas en el proyecto",
@@ -313,117 +316,117 @@ export const card: Card[] = [
     LinkChildrenTextEs:"Visualizar el codigo en gitHub",
     linkChildrenTextEn:"View code on GitHub ",
 
-    IsLinkToProject:false,
-    linkHrefToProject:"",
-    LinkToProjectIcon: <AiOutlineGithub/>,
-    LinkChildrenTextToProjectEs:"Visualizar el codigo en gitHub",
-    linkChildrenTextToProjectEn:"View code on GitHub ",
+    IsLinkToProject:true,
+    linkHrefToProject:"http://finanzasapp.nbjdev.com/",
+    LinkToProjectIcon: <FiNavigation/>,
+    LinkChildrenTextToProjectEs:"Visitar sitio web",
+    linkChildrenTextToProjectEn:"Visit website",
 
 
   },
-  {
-    id:"proyectoWeatherApi-225512",
-    titleEn:"Weather Api",
-    tittleEs:" Api del Clima",
-    spanTittleEs:"(Proyecto FrontEnd)",
-    spanTittleEn:"(Frontend Project)",
-    dataForCarousel:[],
+//   {
+//     id:"proyectoWeatherApi-225512",
+//     titleEn:"Weather Api",
+//     tittleEs:" Api del Clima",
+//     spanTittleEs:"(Proyecto FrontEnd)",
+//     spanTittleEn:"(Frontend Project)",
+//     dataForCarousel:[],
 
-    imgSrc:"https://i.pinimg.com/564x/a2/bb/de/a2bbdea29ae94f652292da1f0b9c589c.jpg",
-    imgALT:"Weather Api", 
+//     imgSrc:"https://i.pinimg.com/564x/a2/bb/de/a2bbdea29ae94f652292da1f0b9c589c.jpg",
+//     imgALT:"Weather Api", 
 
-    subTittleTechnologiesEs:"Tecnologias usadas en el proyecto",
-    subTittleTechnologiesEn:"Technologies used in the project",
+//     subTittleTechnologiesEs:"Tecnologias usadas en el proyecto",
+//     subTittleTechnologiesEn:"Technologies used in the project",
 
-    IsActiveJs:true,
-    ListItemTechologiJavascript:"Javascript",
-    ListItemTechnologyJavaScriptIcon:<SiJavascript/>,
+//     IsActiveJs:true,
+//     ListItemTechologiJavascript:"Javascript",
+//     ListItemTechnologyJavaScriptIcon:<SiJavascript/>,
 
-    IsActiveJsonWebToken:false,
-    listItemTechologiJsonWebToken:"json webToken",
-    ListItemTechnologyJsonWebToken:<SiJsonwebtokens/>,
+//     IsActiveJsonWebToken:false,
+//     listItemTechologiJsonWebToken:"json webToken",
+//     ListItemTechnologyJsonWebToken:<SiJsonwebtokens/>,
 
-    IsActiveHtml:true,
-    ListItemTechologiHtml:"Html",
-    ListItemHtmlIcon:  <AiFillHtml5/>,
+//     IsActiveHtml:true,
+//     ListItemTechologiHtml:"Html",
+//     ListItemHtmlIcon:  <AiFillHtml5/>,
 
-    IsActiveCss:true,
-    ListItemTechologiCSS:"Css",
-    ListItemTechnologyCssIcon:<SiCss3/>,
+//     IsActiveCss:true,
+//     ListItemTechologiCSS:"Css",
+//     ListItemTechnologyCssIcon:<SiCss3/>,
 
-    IsActiveReactJs:true,
-    ListItemTechologiReactJs:"React Js",
-    ListItemTechnologyReactJsIcon:<FaReact/>,
+//     IsActiveReactJs:true,
+//     ListItemTechologiReactJs:"React Js",
+//     ListItemTechnologyReactJsIcon:<FaReact/>,
 
-    IsActiveReactRedux:true,
-    ListItemTechologiReactRedux:"React Redux",
-    ListItemTechnologyReactReduxIcon:<TbBrandRedux/>,
+//     IsActiveReactRedux:true,
+//     ListItemTechologiReactRedux:"React Redux",
+//     ListItemTechnologyReactReduxIcon:<TbBrandRedux/>,
 
-    ListItemTechologiReactRouter:"React Router",
-    ListItemTechnologyReactRouterIcon:<SiReactrouter/>,
-    IsActiveReactRouter:true,
+//     ListItemTechologiReactRouter:"React Router",
+//     ListItemTechnologyReactRouterIcon:<SiReactrouter/>,
+//     IsActiveReactRouter:true,
 
-    IsActiveNodeJs:false,
-    ListItemTechologiNodeJs:"Node Js",
-    ListItemTechnologyNodeJsIcon:<FaNodeJs/>,
+//     IsActiveNodeJs:false,
+//     ListItemTechologiNodeJs:"Node Js",
+//     ListItemTechnologyNodeJsIcon:<FaNodeJs/>,
 
-    IsActiveExpressJs:false,
-    ListItemTechologiExpress:"Expesss Js",
-    ListItemTechnologyExpressJsIcon:<SiExpress/>,
+//     IsActiveExpressJs:false,
+//     ListItemTechologiExpress:"Expesss Js",
+//     ListItemTechnologyExpressJsIcon:<SiExpress/>,
 
-    IsActiveMongoDb:false,
-    ListItemTechologiMongoDB:"Mongo DB",
-    ListItemTechnologyMongoDbIcon:<SiMongodb/>,
+//     IsActiveMongoDb:false,
+//     ListItemTechologiMongoDB:"Mongo DB",
+//     ListItemTechnologyMongoDbIcon:<SiMongodb/>,
 
-    IsActiveMaterialUi:false,
-    ListItemTechologiMaterialUi:"MaterialUI",
-    ListItemTechnologyMaterialUiIcon:<SiMui/>,
+//     IsActiveMaterialUi:false,
+//     ListItemTechologiMaterialUi:"MaterialUI",
+//     ListItemTechnologyMaterialUiIcon:<SiMui/>,
 
-    IsActiveAntDesign:true,
-    ListItemTechologiAntDesign:"Ant Design",
-    ListItemTechnologyAntDesignIcon:<AiOutlineAntDesign/>,
+//     IsActiveAntDesign:true,
+//     ListItemTechologiAntDesign:"Ant Design",
+//     ListItemTechnologyAntDesignIcon:<AiOutlineAntDesign/>,
 
-    IsActiveTailwind:false,
-    ListItemTechologiTailwind:"Tailwind",
-    ListItemTechnologyTailwindIcon:<SiTailwindcss/>,
+//     IsActiveTailwind:false,
+//     ListItemTechologiTailwind:"Tailwind",
+//     ListItemTechnologyTailwindIcon:<SiTailwindcss/>,
 
-    IsActiveTypeScript:false,
-    ListItemTechologiTypeScript:"TypeScript",
-    ListItemTechnologyTypeScript:  <SiTypescript/>,
+//     IsActiveTypeScript:false,
+//     ListItemTechologiTypeScript:"TypeScript",
+//     ListItemTechnologyTypeScript:  <SiTypescript/>,
 
-    DescriptionTittleEs:"Descripcion",
-    DescriptionTittleEnglish:"Description",
+//     DescriptionTittleEs:"Descripcion",
+//     DescriptionTittleEnglish:"Description",
 
-    DescriptionTextEs:`
-    En este proyecto, se consume una API de clima que incluye geolocalización y búsqueda por ciudad. El proyecto consta de dos páginas principales: la página de búsqueda y la página de visualización de información.    <br /><br />
+//     DescriptionTextEs:`
+//     En este proyecto, se consume una API de clima que incluye geolocalización y búsqueda por ciudad. El proyecto consta de dos páginas principales: la página de búsqueda y la página de visualización de información.    <br /><br />
 
-    En la página de búsqueda, los usuarios pueden buscar la información del clima utilizando la geolocalización o ingresando el nombre de una ciudad específica. Por otro lado, en la página de visualización de información, se muestra la información detallada del clima para la ubicación seleccionada.    <br /><br />
+//     En la página de búsqueda, los usuarios pueden buscar la información del clima utilizando la geolocalización o ingresando el nombre de una ciudad específica. Por otro lado, en la página de visualización de información, se muestra la información detallada del clima para la ubicación seleccionada.    <br /><br />
     
-    En el apartado de información, se pueden visualizar datos como la temperatura, sensación térmica, velocidad del viento y los rayos UV, proporcionando a los usuarios una visión general del clima actual en la ubicación elegida.
-`,
-    DescriptionTextEn:`
+//     En el apartado de información, se pueden visualizar datos como la temperatura, sensación térmica, velocidad del viento y los rayos UV, proporcionando a los usuarios una visión general del clima actual en la ubicación elegida.
+// `,
+//     DescriptionTextEn:`
 
-    In this project, a weather API is consumed, which includes geolocation and city search functionalities. The project consists of two main pages: the search page and the information display page.   <br /><br />
+//     In this project, a weather API is consumed, which includes geolocation and city search functionalities. The project consists of two main pages: the search page and the information display page.   <br /><br />
 
 
-    On the search page, users can search for weather information by using geolocation or entering the name of a specific city. On the other hand, the information display page shows detailed weather information for the selected location.   <br /><br />
+//     On the search page, users can search for weather information by using geolocation or entering the name of a specific city. On the other hand, the information display page shows detailed weather information for the selected location.   <br /><br />
     
     
-    In the information section, users can view data such as temperature, perceived temperature, wind speed, and UV index, providing them with an overview of the current weather conditions in the chosen location.
-    `,
+//     In the information section, users can view data such as temperature, perceived temperature, wind speed, and UV index, providing them with an overview of the current weather conditions in the chosen location.
+//     `,
     
-    IsLinkToGitHub:true,
-    linkHrefGitHub:"https://github.com/Nickbrian246/weather-api/tree/main",
-    LinkGitHubIcon: <AiOutlineGithub/>,
-    LinkChildrenTextEs:"Visualizar el codigo en gitHub",
-    linkChildrenTextEn:"View code on GitHub ",
+//     IsLinkToGitHub:true,
+//     linkHrefGitHub:"https://github.com/Nickbrian246/weather-api/tree/main",
+//     LinkGitHubIcon: <AiOutlineGithub/>,
+//     LinkChildrenTextEs:"Visualizar el codigo en gitHub",
+//     linkChildrenTextEn:"View code on GitHub ",
 
-    IsLinkToProject:false,
-    linkHrefToProject:"",
-    LinkToProjectIcon: <AiOutlineGithub/>,
-    LinkChildrenTextToProjectEs:"Visualizar el codigo en gitHub",
-    linkChildrenTextToProjectEn:"View code on GitHub ",
+//     IsLinkToProject:false,
+//     linkHrefToProject:"",
+//     LinkToProjectIcon: <AiOutlineGithub/>,
+//     LinkChildrenTextToProjectEs:"Visualizar el codigo en gitHub",
+//     linkChildrenTextToProjectEn:"View code on GitHub ",
 
 
-  },
+//   },
 ]
