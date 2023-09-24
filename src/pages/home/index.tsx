@@ -6,7 +6,8 @@ import { card } from "./components/projects/utils";
 import { CardProjects } from "./components/projects/projectsCard";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import {MdOutlineEmail } from "react-icons/md"
-import CV from "../../assets/CV-NBJM.pdf"
+import CV from "../../assets/NBJM-CV-ES.pdf";
+import CV_EN from  "../../assets/NBJM-CV-EN.pdf";
 import { DividerWithText } from "../../components/DividesWithText";
 
 
@@ -15,7 +16,6 @@ function Home() {
   const [isIntersectingProjects, setIsIntersectingProjects] = useState<boolean>(false)
   const [isIntersectingContact, setIsIntersectingContact] = useState<boolean>(false)
   const [isIntersectingAboutMe, setIsIntersectingAboutMe] = useState<boolean>(false)
-  const [isOpenModel,setIsOpeonModal] = useState<boolean>(false);
   const projectsRef = useRef<HTMLDivElement>(null)
   const contactRef = useRef<HTMLDivElement>(null)
   const aboutMeRef = useRef<HTMLDivElement>(null)
@@ -69,14 +69,14 @@ function Home() {
       <article ref={aboutMeRef} className="max-full bg-[#343353] flex items-center justify-center  h-screen p-5 m-auto " >   {/* about me  */}
           <div className="md:w-2/4 h-screen  flex flex-col justify-center">
             <h2 className="font-semibold italic my-5 text-4xl text-white">
-                {language ? "Hola, soy Nick Brian y soy Ingeniero Mecatrónico y desarrollador Web."
-                :"Hello, my name is Nick Brian and I am a mechatronics engineer and web developer." }
+                {language ? "Hola, soy Nick Brian y soy Ingeniero Mecatrónico."
+                :"Hello, my name is Nick Brian and I am a mechatronics engineer " }
             </h2>
             <p className="text-xl text-white">
-              {language ? " Me apasiona el mundo del desarrollo de software y disfruto trabajando con React Js y JavaScript."
-              : " I am an engineer by profession but a web developer by passion." }
+              {language ? " Soy un ingeniero apasionado por el desarrollo web. Mi formación en ingeniería me proporciona una base sólida para crear soluciones tecnológicas innovadoras en el mundo digital. La creación de sitios web y aplicaciones es mi pasión. ¡El desarrollo web es donde mi corazón y mi ingenio se unen para dar vida a ideas digitales emocionantes! "
+              : " I'm an engineer passionate about web development. My engineering background provides me with a solid foundation for creating innovative technological solutions in the digital world. Web development is where my heart and ingenuity come together to bring exciting digital ideas to life!." }
             </p>
-            <a href={CV} target="_blank" className="  my-14 w-44 h-14">
+            <a href={ language ?  CV :CV_EN} target="_blank" className="  my-14 w-44 h-14">
                 <button className=" w-44 h-14 bg-red-700 rounded text-2xl text-white">
                 {language ? "Ver Cv" : "View CV"}
                 </button>
@@ -85,7 +85,7 @@ function Home() {
       </article>
 
       <section id="Projects" ref={projectsRef} className={`
-      max-w-7xl
+      w-full
       my-20  p-5
       flex m-auto
       justify-around
@@ -193,7 +193,7 @@ function Home() {
                     </a>
                     </li>
                   <li >
-                    <a href="mailto:Nbjm1234@outlook.com" className="
+                    <a href="mailto:nicknbjm@gmail.com" className="
                           w-fit
                           mt-2
                           flex
@@ -203,7 +203,7 @@ function Home() {
                           hover:underline
                           "
                           >
-                            <MdOutlineEmail/>Nbjm1234@outlook.com
+                            <MdOutlineEmail/>nicknbjm@gmail.com
                     </a>
                   </li>
                   <li>

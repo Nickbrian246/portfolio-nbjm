@@ -99,7 +99,7 @@ export const card: Card[] = [
     ListItemTechologiTypeScript:"TypeScript",
     ListItemTechnologyTypeScript:  <SiTypescript/>,
 
-    DescriptionTittleEs:"Descripcion",
+    DescriptionTittleEs:"Descripción",
     DescriptionTittleEnglish:"Description",
 
     DescriptionTextEs:`
@@ -114,7 +114,7 @@ export const card: Card[] = [
     IsLinkToGitHub:true,
     linkHrefGitHub:"https://github.com/Nickbrian246/Farmacia_meneses_v1",
     LinkGitHubIcon: <AiOutlineGithub/>,
-    LinkChildrenTextEs:"Visualizar el codigo en gitHub",
+    LinkChildrenTextEs:"Visualizar codigo en gitHub",
     linkChildrenTextEn:"View code on GitHub ",
 
     IsLinkToProject:true,
@@ -197,7 +197,7 @@ export const card: Card[] = [
     ListItemTechologiTailwind:"Tailwind",
     ListItemTechnologyTailwindIcon:<SiTailwindcss/>,
 
-    DescriptionTittleEs:"Descripcion",
+    DescriptionTittleEs:"Descripción",
     DescriptionTittleEnglish:"Description",
 
     DescriptionTextEs:`
@@ -205,14 +205,14 @@ export const card: Card[] = [
     En primer lugar, está la página de inicio (home) donde se muestran todos los productos disponibles. Luego, se encuentra la página del producto individual, donde se muestra el producto junto con una sección de críticas y calificaciones. Por último, está la página de compra del producto, donde los usuarios pueden realizar la compra del producto seleccionado
 `,
     DescriptionTextEn:`
-    This project is exclusively frontend. The Fake.js library is used to simulate backend information. Additionally, a recreation of the "Mercado Libre" e-commerce site is presented. The project consists of 3 main pages.<br /><br />
+    This project is exclusively frontend. The Fake.js library is used to simulate backend information. Additionally, a recreation of the "Mercado Libre" e-commerce site is presented. The project consists of 4 main pages.<br /><br />
     Firstly, there is the home page where all available products are displayed. Next, there is the individual product page, which showcases the product along with a section for reviews and ratings. Lastly, there is the product purchase page, where users can make a purchase of the selected product.
     `,
     
     IsLinkToGitHub:true,
     linkHrefGitHub:"https://github.com/Nickbrian246/mercado-libre-clon",
     LinkGitHubIcon: <AiOutlineGithub/>,
-    LinkChildrenTextEs:"Visualizar el codigo en gitHub",
+    LinkChildrenTextEs:"Visualizar codigo en gitHub",
     linkChildrenTextEn:"View code on GitHub ",
 
     IsLinkToProject:true,
@@ -294,26 +294,24 @@ export const card: Card[] = [
     ListItemTechologiTypeScript:"TypeScript",
     ListItemTechnologyTypeScript:  <SiTypescript/>,
 
-    DescriptionTittleEs:"Descripcion",
+    DescriptionTittleEs:"Descripción",
     DescriptionTittleEnglish:"Description",
 
     DescriptionTextEs:`
-    Este proyecto es un sistema de punto de venta donde se pueden registrar productos que se guardan en una base de datos no relacional.<br /><br />
-    Además, permite realizar ventas y generar registros de dichas transacciones en la base de datos. Cuenta con un inicio de sesión que utiliza verificación mediante JSON Web Token.Las rutas del backend están protegidas por roles. También se incluye la verificación de correo electrónico.
-    <br /><br />El proyecto cuenta con una sección de Reportes que permite visualizar la información de las ventas y el inventario actual en el navegador. Para el caso del inventario, se proporcionan filtros por palabras y rangos, así como la opción de ordenar de mayor a menor y viceversa. Además, se pueden resaltar las filas mediante colores según los rangos seleccionados por el usuario. También se generan gráficas de las ventas según los días o fechas seleccionados por el usuario, lo que facilita la visualización de la información.
-    <br /><br />Además, el sistema permite descargar los informes en formato Excel con la información presente.
+  En esencia, este proyecto se compone de tres elementos clave. En primer lugar, se presenta una sección informativa que proporciona información sobre cómo usar la página. A continuación, el proyecto incluye tres formularios específicos que permiten a los usuarios ingresar sus gastos de acuerdo a el criterio del formulario.
+<br /><br />Una vez que los datos se han introducido y el usuario ha dado clic en el botón "generar balance", el sistema genera proyecciones financieras mensuales y anuales en forma de gráficos, lo que facilita la visualización de su situación financiera a lo largo del tiempo. Además, los usuarios también podrán visualizar un carrusel de consejos financieros que les ayudarán a mejorar su salud financiera en general.
+
 `,
     DescriptionTextEn:`
-    This project is a point of sale system where products can be registered and stored in a non-relational database.<br /><br />
-    Additionally, it enables sales transactions and generates records in the database. It features a login system with JSON Web Token verification.The backend routes are protected by roles. Email verification is also included.<br /><br />
-    The project includes a Reports section that allows visualizing sales information and the current inventory in the browser. For inventory management, it provides filters for keywords and ranges, as well as the option to sort from highest to lowest and vice versa. Furthermore, rows can be highlighted with colors based on user-selected ranges. The system also generates sales graphs based on user-selected days or dates, enhancing information visualization.<br /><br />
-    Moreover, the system allows downloading reports in Excel format with the available information.
+  Essentially, this project consists of three key elements. First, it features an informative section that provides information on how to use the page. Next, the project includes three specific forms that allow users to enter their expenses according to the form's criteria.
+<br /><br />Once the data has been entered and the user has clicked the "generate balance" button, the system generates monthly and annual financial projections in the form of charts, making it easier to visualize their financial situation over time. Additionally, users will also be able to view a carousel of financial tips to help them improve their overall financial health.
+
     `,
     
     IsLinkToGitHub:true,
     linkHrefGitHub:"https://github.com/Nickbrian246/Farmacia_meneses_v1",
     LinkGitHubIcon: <AiOutlineGithub/>,
-    LinkChildrenTextEs:"Visualizar el codigo en gitHub",
+    LinkChildrenTextEs:"Visualizar codigo en gitHub",
     linkChildrenTextEn:"View code on GitHub ",
 
     IsLinkToProject:true,
@@ -394,7 +392,7 @@ export const card: Card[] = [
 //     ListItemTechologiTypeScript:"TypeScript",
 //     ListItemTechnologyTypeScript:  <SiTypescript/>,
 
-//     DescriptionTittleEs:"Descripcion",
+//     DescriptionTittleEs:"Descripción",
 //     DescriptionTittleEnglish:"Description",
 
 //     DescriptionTextEs:`
@@ -418,13 +416,13 @@ export const card: Card[] = [
 //     IsLinkToGitHub:true,
 //     linkHrefGitHub:"https://github.com/Nickbrian246/weather-api/tree/main",
 //     LinkGitHubIcon: <AiOutlineGithub/>,
-//     LinkChildrenTextEs:"Visualizar el codigo en gitHub",
+//     LinkChildrenTextEs:"Visualizar codigo en gitHub",
 //     linkChildrenTextEn:"View code on GitHub ",
 
 //     IsLinkToProject:false,
 //     linkHrefToProject:"",
 //     LinkToProjectIcon: <AiOutlineGithub/>,
-//     LinkChildrenTextToProjectEs:"Visualizar el codigo en gitHub",
+//     LinkChildrenTextToProjectEs:"Visualizar codigo en gitHub",
 //     linkChildrenTextToProjectEn:"View code on GitHub ",
 
 

@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Carousel = (props: Props) => {
-  const { setIsOpenModal, dataForCarousel } = props;
+  const { dataForCarousel } = props;
   const { language } = useContext(Language);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [selectedImage, setSelectedImage] = useState(dataForCarousel[selectedIndex].img);

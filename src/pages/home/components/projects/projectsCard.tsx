@@ -64,7 +64,6 @@ const CardProjects = (props:Card) => {
   const {language } = useContext(Language);
   const [showFullDescription, setShowFullDescription] = useState<boolean>(false);
   const[isOpenModal, setIsOpenModal] = useState<boolean>(false);
-  const [keypress, setKeyPress] = useState<string>("")
   const toggleDescription = () => {
     setShowFullDescription(!showFullDescription);
   };
@@ -92,6 +91,7 @@ const CardProjects = (props:Card) => {
         border-[#333252]
         sm:p-4
         p-1 
+        h-fit
         ${isOpenModal ? "relative" : "static  "}`}
         > {/** contenedor de la carta */}
           <div className="flex justify-center">
@@ -111,8 +111,18 @@ const CardProjects = (props:Card) => {
               <a target="_self" href="#carouselModal">
               <picture
               onClick={()=>{setIsOpenModal(true)}} 
-              className=" max-h-56 cursor-pointer">
-                <img className="border-blue-600 border-2 rounded-md max-w-[400px] max-h-56 m-auto" src={imgSrc} alt={imgALT}/>
+              className=" max-h-56 cursor-pointer ">
+                <img className="
+                border-blue-600
+                border-2
+                rounded-md
+                max-w-[400px]
+                max-h-56
+                m-auto
+                hover:scale-110
+                transition-all
+                duration-500
+                " src={imgSrc} alt={imgALT}/>
               </picture>
               </a>
               <div className="mt-3">
@@ -289,6 +299,9 @@ const CardProjects = (props:Card) => {
                       gap-1
                       text-base
                       hover:underline
+                      hover:scale-110
+                      transition-all
+                      
                       "
                       >
                         {LinkGitHubIcon}
@@ -307,6 +320,8 @@ const CardProjects = (props:Card) => {
                       gap-1
                       text-base
                       hover:underline
+                      hover:scale-110
+                      transition-all
                       "
                       >
                         {LinkToProjectIcon}

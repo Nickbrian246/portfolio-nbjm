@@ -13,8 +13,8 @@ import { CarouselData } from "../../interfaces";
 export const pointOfSaleData:CarouselData[]= [
     {
         img:logInImage,
-        descriptionEs:"LogIn con encriptado de contraseña con JSON Web Token.",
-        descriptionEn:"LogIn with password encryption using JSON Web Token.",
+        descriptionEs:"Inicio de sesión con encriptación de contraseña mediante JSON Web Token.",
+        descriptionEn:"Login with password encryption using JSON Web Token.",
         objectDescription:" imagen de login"
     },
     {
