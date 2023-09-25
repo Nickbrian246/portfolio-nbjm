@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, } from "react";
 import { CarouselData } from "../interfaces";
 import { Language } from "../store";
 import { TiDeleteOutline } from "react-icons/ti";

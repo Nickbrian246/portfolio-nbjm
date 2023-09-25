@@ -14,6 +14,11 @@ const DropMenu = (props:Props) => {
   const handleLanguage = (id:string):void => {
     if(id==="languageLink"){
       handleState()
+      setIsOpenMenu(false)
+      
+    }else {
+
+      setIsOpenMenu(false)
     }
   }
 
@@ -46,7 +51,7 @@ border-b-[1px]
       {collapsableMenuOptions.map((item) => (
         <div className=" flex-1  flex justify-start " key={item.id}>
           <a href={item.to}>
-          <button onClick={()=> { handleLanguage(item.id) ,setIsOpenMenu(prevState => ! prevState)}} className="text-2xl flex justify-items-start w-full text-center gap-1">
+          <button onClick={()=> { handleLanguage(item.id)}} className="text-2xl flex justify-items-start w-full text-center gap-1">
             <div className="pt-1 ">
               <p className="text-white">{item.icon}</p>
             </div>
