@@ -70,7 +70,7 @@ function Home() {
           <div className="md:w-2/4 h-screen  flex flex-col justify-center">
             <h2 className="font-semibold italic my-5 text-4xl text-white">
                 {language ? "Hola, soy Nick Brian y soy Ingeniero Mecatrónico."
-                :"Hello, my name is Nick Brian and I am a mechatronics engineer.  " }
+                :"Hello, my name is Nick Brian and I am mechatronics engineer." }
             </h2>
             <p className="text-xl text-white">
               {language ? `Soy un ingeniero apasionado por el desarrollo web.¡El desarrollo web es donde mi corazón y mi ingenio se unen para dar vida a ideas digitales emocionantes!`
