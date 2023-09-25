@@ -11,7 +11,6 @@ import {AiOutlineCheckCircle} from "react-icons/ai"
 
 const CardProjects = (props:Card) => {
   const {
-    borderColor,
     isResponsive,
     dataForCarousel,
     DescriptionTextEn,
@@ -357,7 +356,7 @@ const CardProjects = (props:Card) => {
         {isOpenModal && (
           <div
           id="carouselModal"
-          className="
+          className={`
           w-full
           flex
           justify-center
@@ -366,12 +365,12 @@ const CardProjects = (props:Card) => {
           z-30
           left-0
           h-full
-          backdrop-blur-sm
-          ">
+          backdrop-blur-sm`}
+          >
 
           <div 
           >
- 
+
             <Carousel 
             dataForCarousel = {dataForCarousel}
             setIsOpenModal={setIsOpenModal}

@@ -1,7 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { CarouselData } from "../interfaces";
 import { Language } from "../store";
 import { TiDeleteOutline } from "react-icons/ti";
+import {AiOutlineArrowRight,AiOutlineArrowLeft} from "react-icons/ai"
 
 interface Props {
   setIsOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
@@ -13,6 +14,7 @@ const Carousel = (props: Props) => {
   const { language } = useContext(Language);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [selectedImage, setSelectedImage] = useState(dataForCarousel[selectedIndex].img);
+
 
   const prev = () => {
     const condition = selectedIndex > 0;
@@ -80,7 +82,14 @@ const Carousel = (props: Props) => {
             opacity-20
           `}
         />
-        <p className="text-center mt-3 font-semibold text-sm md:text-lg">
+        <p className={`
+        text-center
+        mt-3
+        font-semibold
+        text-sm
+        md:text-lg
+        transition-all
+        `} >
           {language ? dataForCarousel[selectedIndex].descriptionEs : dataForCarousel[selectedIndex].descriptionEn}
         </p>
         <div className="bg-slate-950 w-full h-1"></div>
@@ -88,7 +97,6 @@ const Carousel = (props: Props) => {
     <img
           className={`
             w-full
-
           `}
           src={selectedImage}
         />
@@ -99,7 +107,7 @@ const Carousel = (props: Props) => {
             absolute
             top-[45%]
             -left-10
-            md:-left-32
+            md:-left-20
             rounded-full
             border
             bg-slate-300
@@ -108,9 +116,13 @@ const Carousel = (props: Props) => {
             md:w-20
             md:h-20
             outline-none
+            text-4xl
+            flex
+            justify-center
+            items-center
           `}
         >
-          {`<`}
+        <AiOutlineArrowLeft/>
         </button>
         <button
           onClick={() => next()}
@@ -119,7 +131,7 @@ const Carousel = (props: Props) => {
             absolute
             top-[45%]
             -right-10
-            md:-right-40
+            md:-right-20
             rounded-full
             border
             bg-slate-300
@@ -127,10 +139,13 @@ const Carousel = (props: Props) => {
             h-11
             md:w-20
             md:h-20
-            text-lg
+            text-4xl
+            flex
+            justify-center
+            items-center
           `}
         >
-          <span>{`>`}</span>
+        <AiOutlineArrowRight/>
         </button>
       </section>
     </>
