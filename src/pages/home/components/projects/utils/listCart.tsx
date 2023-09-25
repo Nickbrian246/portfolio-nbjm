@@ -32,18 +32,20 @@ export const card: Card[] = [
     id:"proyectoPuntoDeVENTA-225512",
     titleEn:"Point of sale",
     tittleEs:"Punto de venta",
-    spanTittleEs:"(Proyecto FullStack )",
-    spanTittleEn:"(FullStack Project)",
+    spanTittleEs:" (Proyecto FullStack )",
+    spanTittleEn:" (FullStack Project)",
     dataForCarousel:pointOfSaleData,
+    isResponsive:false,
+    borderColor:"#e8f3f3",
     
 
     imgSrc:pointOfSaleHomePicture,
     imgALT:"point Of Sale project", 
 
-    subTittleTechnologiesEs:"Tecnologias usadas en el proyecto",
+    subTittleTechnologiesEs:"Tecnologías usadas en este proyecto",
     subTittleTechnologiesEn:"Technologies used in the project",
 
-    IsActiveJs:true,
+    IsActiveJs:false,
     ListItemTechologiJavascript:"Javascript",
     ListItemTechnologyJavaScriptIcon:<SiJavascript/>,
 
@@ -103,8 +105,8 @@ export const card: Card[] = [
     DescriptionTittleEnglish:"Description",
 
     DescriptionTextEs:`
-    En este proyecto, puedes realizar el registro(calcular precio por porcentaje), actualización y eliminación de productos. Además, puedes registrar ventas y generar informes de ventas para una fecha seleccionada por el usuario. Los informes pueden ser presentados en formato gráfico para comparar las ventas entre diferentes días. También se ofrece la opción de descargar los informes en formato Excel.<br /><br />
-    El proyecto incluye una sección de inventario que permite filtrar por nombre, ordenar de mayor a menor y viceversa, y aplicar filtros por rangos. Además, se resalta visualmente las filas que cumplen con las condiciones establecidas en los rangos. También se brinda la opción de descargar el inventario en formato Excel
+    En este proyecto, puedes realizar el registro (calcular precio por porcentaje), actualización y eliminación de productos. Además, puedes registrar ventas y generar informes de ventas para una fecha seleccionada por el usuario. Los informes pueden ser presentados en formato gráfico para comparar las ventas entre diferentes días. También se ofrece la opción de descargar los informes en formato Excel.<br /><br />
+El proyecto incluye una sección de inventario que permite filtrar por nombre, ordenar de mayor a menor y viceversa, y aplicar filtros por rangos. Además, se resaltan visualmente las filas que cumplen con las condiciones establecidas en los rangos. También se brinda la opción de descargar el inventario en formato Excel.
 `,
     DescriptionTextEn:`
     In this project, you can register products (calculate price based on desired profit percentage), update them, and delete them. Similarly, you can register sales. The project includes a reports section where you can generate a sales report for the user-selected date. There is an option to view the data in a graphical format for cases where multiple days are involved, allowing you to visually observe the difference in sales between one day and another. Additionally, the project offers the option to download the report in Excel format.<br /><br />
@@ -129,15 +131,16 @@ export const card: Card[] = [
     id:"proyectoMercadoLibreClone-225512",
     titleEn:"Mercado libre E-commerce clone ",
     tittleEs:"Mercado libre Clone",
-    spanTittleEs:"(Proyecto solo FrontEnd )",
-    spanTittleEn:"(Frontend Project)",
+    spanTittleEs:" (Proyecto solo FrontEnd )",
+    spanTittleEn:" (Frontend Project)",
     dataForCarousel:mercadoLibreClonData,
-    
+    isResponsive:false,
+    borderColor:"#fff159",
 
     imgSrc:mercadoLibreImage,
     imgALT:"e-commerce project ", 
 
-    subTittleTechnologiesEs:"Tecnologias usadas en el proyecto",
+    subTittleTechnologiesEs:"Tecnologías usadas en este proyecto",
     subTittleTechnologiesEn:"Technologies used in the project",
 
     
@@ -201,8 +204,8 @@ export const card: Card[] = [
     DescriptionTittleEnglish:"Description",
 
     DescriptionTextEs:`
-    Este proyecto es exclusivamente frontend. Se utiliza la biblioteca Fake.js para simular la información del backend. Además, se presenta una recreación del sitio de comercio electrónico "Mercado Libre". El proyecto consta de 3 páginas principales.<br /><br />
-    En primer lugar, está la página de inicio (home) donde se muestran todos los productos disponibles. Luego, se encuentra la página del producto individual, donde se muestra el producto junto con una sección de críticas y calificaciones. Por último, está la página de compra del producto, donde los usuarios pueden realizar la compra del producto seleccionado
+    Este proyecto es exclusivamente frontend. Se utiliza la biblioteca Fake.js para simular la información del backend. Además, se presenta una recreación del sitio de comercio electrónico "Mercado Libre". El proyecto consta de 4 páginas principales.<br /><br />
+En primer lugar, está la página de inicio (home) donde se muestran todos los productos disponibles. Luego, se encuentra la página del producto individual, donde se muestra el producto junto con una sección de críticas y calificaciones. Por último, está la página de compra del producto, donde los usuarios pueden realizar la compra del producto seleccionado.
 `,
     DescriptionTextEn:`
     This project is exclusively frontend. The Fake.js library is used to simulate backend information. Additionally, a recreation of the "Mercado Libre" e-commerce site is presented. The project consists of 4 main pages.<br /><br />
@@ -227,15 +230,16 @@ export const card: Card[] = [
     id:"proyectoFinanceApp-225512",
     titleEn:"Finance app",
     tittleEs:"Finanzas app ",
-    spanTittleEs:"(Proyecto frontEnd )",
-    spanTittleEn:"(Frontend Project)",
+    spanTittleEs:" (Proyecto frontEnd )",
+    spanTittleEn:" (Frontend Project)",
     dataForCarousel :fiananzasApp,
-    
+    isResponsive:true,
+    borderColor:"#0000ff",
 
     imgSrc:fiananzasAppImage,
     imgALT:"Finance app", 
 
-    subTittleTechnologiesEs:"Tecnologias usadas en el proyecto",
+    subTittleTechnologiesEs:"Tecnologías usadas en este proyecto",
     subTittleTechnologiesEn:"Technologies used in the project",
 
     IsActiveJs:true,
@@ -298,8 +302,8 @@ export const card: Card[] = [
     DescriptionTittleEnglish:"Description",
 
     DescriptionTextEs:`
-  En esencia, este proyecto se compone de tres elementos clave. En primer lugar, se presenta una sección informativa que proporciona información sobre cómo usar la página. A continuación, el proyecto incluye tres formularios específicos que permiten a los usuarios ingresar sus gastos de acuerdo a el criterio del formulario.
-<br /><br />Una vez que los datos se han introducido y el usuario ha dado clic en el botón "generar balance", el sistema genera proyecciones financieras mensuales y anuales en forma de gráficos, lo que facilita la visualización de su situación financiera a lo largo del tiempo. Además, los usuarios también podrán visualizar un carrusel de consejos financieros que les ayudarán a mejorar su salud financiera en general.
+    En esencia, este proyecto se compone de tres elementos clave. En primer lugar, se presenta una sección informativa que proporciona información sobre cómo usar la página. A continuación, el proyecto incluye tres formularios específicos que permiten a los usuarios ingresar sus gastos de acuerdo con el criterio del formulario.
+    <br /><br />Una vez que los datos se han introducido y el usuario ha hecho clic en el botón "generar balance", el sistema genera proyecciones financieras mensuales y anuales en forma de gráficos, lo que facilita la visualización de su situación financiera a lo largo del tiempo. Además, los usuarios también podrán visualizar un carrusel de consejos financieros que les ayudarán a mejorar su salud financiera en general.
 
 `,
     DescriptionTextEn:`
@@ -333,7 +337,7 @@ export const card: Card[] = [
 //     imgSrc:"https://i.pinimg.com/564x/a2/bb/de/a2bbdea29ae94f652292da1f0b9c589c.jpg",
 //     imgALT:"Weather Api", 
 
-//     subTittleTechnologiesEs:"Tecnologias usadas en el proyecto",
+//     subTittleTechnologiesEs:"Tecnologías usadas en este proyecto",
 //     subTittleTechnologiesEn:"Technologies used in the project",
 
 //     IsActiveJs:true,

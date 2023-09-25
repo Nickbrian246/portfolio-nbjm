@@ -4,36 +4,39 @@ import inputsData from "../../assets/finanzasApp/inputs de informacin finanzas a
 import balanceGraphic from "../../assets/finanzasApp/graficas de balanca finanzas app.webp";
 import finanzasAdviceSlider from "../../assets/finanzasApp/slider de consejos financieros.webp"
 import { CarouselData } from "../../interfaces";
-export const fiananzasApp:CarouselData[]= [
-    {
-        img:finanzasImageWelcome,
-        descriptionEs:"",
-        descriptionEn:"",
-        objectDescription:""
-    },
-    {
-        img:instructions,
-        descriptionEs:"Panel de inicio, busque productos por nombre, agréguelos al carrito y complete el registro de la venta.",
-        descriptionEn:`Home panel, search for products by name, add them to the cart, and complete the sale registration.`,
-        objectDescription:"imagen de home  "
-    },
-    {
-        img:inputsData,
-        descriptionEs:"Modal de venta, ingrese el efectivo recibido y realice la venta.",
-        descriptionEn:`Sales modal, enter the received cash, and complete the sale.`,
-        objectDescription:"imagen de modal de venta "
-    },
-    {
-        img:balanceGraphic,
-        descriptionEs:"Crea, elimina, actualiza productos ",
-        descriptionEn:" Create, Update, delete products",
-        objectDescription:"imagen de modal de  agregar productos "
-    },
-    {
-        img:finanzasAdviceSlider,
-        descriptionEs:`Panel de visualización de información de inventario en el que puedes filtrar por nombre, ordenar por precio, cantidad en inventario o por cuántos artículos trae cada paquete, así como filtrar por rangos según el criterio anterior (precio, cantidad en inventario...). `,
-        descriptionEn:`"Inventory information display panel where you can filter by name, sort by price, inventory quantity, or how many items each package contains, and also filter by ranges based on the previous criteria (price, inventory quantity...).`,
-        objectDescription:"imagen de panel de inventario"
-    },
-]
+    export const fiananzasApp:CarouselData[]=[
+        {
+            img: finanzasImageWelcome,
+            descriptionEs: "Esta web se desarrolló con la intención de que el usuario pueda hacer un balance de sus ingresos y egresos y visualizar la salud de sus finanzas.",
+            descriptionEn: "This website was developed with the intention that the user can create a balance of their income and expenses and visualize the health of their finances.",
+            objectDescription: "Imagen de bienvenida de finanzas. Permite a los usuarios realizar un balance de ingresos y gastos para evaluar su situación financiera."
+        },
+        {
+            img: instructions,
+            descriptionEs: "Instrucciones para el uso de la página web.",
+            descriptionEn: "Instructions for using the website.",
+            objectDescription: "Instrucciones para utilizar el sitio web."
+        },
+        {
+            img: inputsData,
+            descriptionEs: "Formularios donde el usuario ingresará sus gastos según corresponda. Después, debe hacer clic en el botón 'Generar balance'.",
+            descriptionEn: "Forms where the user will enter their expenses as appropriate, and then click on the 'Generate balance' button.",
+            objectDescription: "Formularios para ingresar gastos y generar un balance."
+        },
+        {
+            img: balanceGraphic,
+            descriptionEs: "Gráficas que muestran una proyección del balance de sus gastos mensuales y anuales. En caso de ser positivo, se muestran felicitaciones; en caso contrario, se dan consejos.",
+            descriptionEn: "Graphics that show a projection of your monthly and annual expense balance. If it's positive, congratulations are shown; otherwise, advice is given.",
+            objectDescription: "Gráficas de proyección de balance de gastos mensuales y anuales."
+        },
+        {
+            img: finanzasAdviceSlider,
+            descriptionEs: "Carrousel de consejos financieros.",
+            descriptionEn: "Carousel of financial tips.",
+            objectDescription: "Carrusel de consejos financieros."
+        }
+    ]
+    
+    
+    
 

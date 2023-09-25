@@ -5,10 +5,14 @@ import React from "react";
 import { Language } from "../../../../store";
 import { TextShortedNextWhiteSpace } from "../../utils";
 import { Carousel } from "../../../../components/Carousel";
-import {TiDeleteOutline} from  "react-icons/ti"
+
+import {MdDoNotDisturbAlt} from "react-icons/md";
+import {AiOutlineCheckCircle} from "react-icons/ai"
 
 const CardProjects = (props:Card) => {
   const {
+    borderColor,
+    isResponsive,
     dataForCarousel,
     DescriptionTextEn,
     DescriptionTextEs,
@@ -112,8 +116,7 @@ const CardProjects = (props:Card) => {
               <picture
               onClick={()=>{setIsOpenModal(true)}} 
               className=" max-h-56 cursor-pointer ">
-                <img className="
-                border-blue-600
+                <img className={`
                 border-2
                 rounded-md
                 max-w-[400px]
@@ -121,8 +124,9 @@ const CardProjects = (props:Card) => {
                 m-auto
                 hover:scale-110
                 transition-all
-                duration-500
-                " src={imgSrc} alt={imgALT}/>
+                duration-500`}
+                src={imgSrc}
+                alt={imgALT}/>
               </picture>
               </a>
               <div className="mt-3">
@@ -131,14 +135,15 @@ const CardProjects = (props:Card) => {
                 :subTittleTechnologiesEn}
                 </p>
                   <div className="flex h-auto flex-wrap gap-2 "> {/**Listas de tecnologias */}
-                  {IsActiveJs && IsActiveHtml && IsActiveCss  &&(
                       <ul  className="  flex-col h-auto ">
+                    {IsActiveJs && (
                         <li
                         className="  flex  gap-1 items-center text-base text-amber-400 font-medium"
                         >
                           <span>{ListItemTechnologyJavaScriptIcon}</span>
                         JavaScript.
                         </li>
+                    )}
                         {IsActiveTypeScript && (
                         <li
                         className="  flex  gap-1 items-center text-base text-blue-700 font-medium"
@@ -147,23 +152,27 @@ const CardProjects = (props:Card) => {
                           TypeScript
                         </li>
                       )}
-
+                      {IsActiveHtml && (
+                        
                         <li
                         className="  flex  gap-1 items-center text-base text-orange-500 font-medium"
                         >
                           <span>{ListItemHtmlIcon}</span>
                           Html
                         </li>
+                      )}
 
+                      {IsActiveCss && (
                         <li
                         className="  flex  gap-1 items-center text-base text-blue-400 font-medium"
                         >
                           <span>{ListItemTechnologyCssIcon}</span>
                         Css.
                         </li>
-
+       
+                      )}
                       </ul>
-                  )}
+         
                       <ul className="  flex-col h-auto  ">
                           {IsActiveReactJs && (
                               <li
@@ -328,6 +337,20 @@ const CardProjects = (props:Card) => {
                         {language ? LinkChildrenTextToProjectEs : linkChildrenTextToProjectEn}
                       </a>
             )}
+            <span 
+            className={`
+            flex
+            justify-start
+            items-center
+            gap-1
+            text-base
+          ${isResponsive ? "text-cyan-500" : "text-red-600" }`
+        }
+          
+          >
+          {isResponsive ?  <AiOutlineCheckCircle/> : <MdDoNotDisturbAlt/>}
+          { language ? (isResponsive ? "Es responsivo" : "No es responsivo" ): (isResponsive ? "It's responsive" : "It's not responsive")}
+          </span>
 
 
         </div>
@@ -348,20 +371,7 @@ const CardProjects = (props:Card) => {
 
           <div 
           >
-            <button
-            onClick={()=>{setIsOpenModal((prevState) => !prevState)}}
-            className="
-            bg-slate-50
-            rounded-full
-            border
-            absolute
-            z-40
-            right-10
-            top-10
-            text-5xl
-            text-red-700">
-              <TiDeleteOutline/>
-            </button>
+ 
             <Carousel 
             dataForCarousel = {dataForCarousel}
             setIsOpenModal={setIsOpenModal}

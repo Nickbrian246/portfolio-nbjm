@@ -70,11 +70,11 @@ function Home() {
           <div className="md:w-2/4 h-screen  flex flex-col justify-center">
             <h2 className="font-semibold italic my-5 text-4xl text-white">
                 {language ? "Hola, soy Nick Brian y soy Ingeniero Mecatrónico."
-                :"Hello, my name is Nick Brian and I am a mechatronics engineer " }
+                :"Hello, my name is Nick Brian and I am a mechatronics engineer.  " }
             </h2>
             <p className="text-xl text-white">
-              {language ? " Soy un ingeniero apasionado por el desarrollo web. Mi formación en ingeniería me proporciona una base sólida para crear soluciones tecnológicas innovadoras en el mundo digital. La creación de sitios web y aplicaciones es mi pasión. ¡El desarrollo web es donde mi corazón y mi ingenio se unen para dar vida a ideas digitales emocionantes! "
-              : " I'm an engineer passionate about web development. My engineering background provides me with a solid foundation for creating innovative technological solutions in the digital world. Web development is where my heart and ingenuity come together to bring exciting digital ideas to life!." }
+              {language ? `Soy un ingeniero apasionado por el desarrollo web.¡El desarrollo web es donde mi corazón y mi ingenio se unen para dar vida a ideas digitales emocionantes!`
+              : " I'm an engineer passionate about web development.Web development is where my heart and ingenuity come together to bring exciting digital ideas to life!." }
             </p>
             <a href={ language ?  CV :CV_EN} target="_blank" className="  my-14 w-44 h-14">
                 <button className=" w-44 h-14 bg-red-700 rounded text-2xl text-white">
@@ -101,6 +101,8 @@ function Home() {
         />
         {card.map((item)=> { 
           return <CardProjects
+          borderColor={item.borderColor}
+          isResponsive ={item.isResponsive}
           dataForCarousel={item.dataForCarousel} 
             key={item.id}
             DescriptionTextEn={item.DescriptionTextEn}

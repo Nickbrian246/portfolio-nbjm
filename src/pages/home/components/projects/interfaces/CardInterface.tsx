@@ -9,6 +9,8 @@ export interface Card {
   tittleEs: string;
   spanTittleEs?: string;
   spanTittleEn?: string;
+  isResponsive : boolean;
+  borderColor:string;
 
   imgSrc: string;
   imgALT: string;

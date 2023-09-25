@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { CarouselData } from "../interfaces";
 import { Language } from "../store";
+import { TiDeleteOutline } from "react-icons/ti";
 
 interface Props {
   setIsOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
@@ -8,7 +9,7 @@ interface Props {
 }
 
 const Carousel = (props: Props) => {
-  const { dataForCarousel } = props;
+  const { dataForCarousel ,setIsOpenModal} = props;
   const { language } = useContext(Language);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [selectedImage, setSelectedImage] = useState(dataForCarousel[selectedIndex].img);
@@ -29,6 +30,7 @@ const Carousel = (props: Props) => {
 
   return (
     <>
+
       <section
         className={`
           w-4/5
@@ -53,6 +55,20 @@ const Carousel = (props: Props) => {
           z-10
         `}
       >
+          <button
+            onClick={()=>{setIsOpenModal((prevState) => !prevState)}}
+            className="
+            bg-slate-50
+            rounded-full
+            border
+            absolute
+            z-40
+            -right-5
+            -top-5
+            text-5xl
+            text-red-700">
+              <TiDeleteOutline/>
+            </button>
         <div
           className={`
             flex
